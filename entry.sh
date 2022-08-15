@@ -94,7 +94,7 @@ _checkV6() {
 
 }
 
-
+/usr/bin/v2ray -config /etc/v2ray/config.json &
 
 if [ -z "$@" ] || [[ "$1" = -* ]]; then
   runwgcf "$@"

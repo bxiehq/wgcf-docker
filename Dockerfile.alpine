@@ -6,6 +6,7 @@ RUN apk update -f \
   curl ca-certificates \
   iproute2 net-tools iptables \
   wireguard-tools openresolv \
+  v2ray \
   && rm -rf /var/cache/apk/*
   
   
@@ -15,6 +16,7 @@ WORKDIR /wgcf
 
 VOLUME /wgcf
 
+COPY config.json /etc/v2ray/
 
 COPY entry.sh /entry.sh
 RUN chmod +x /entry.sh
